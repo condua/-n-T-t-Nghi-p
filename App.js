@@ -20,7 +20,9 @@ import SettingsNotification from './pages/notification/SettingsNotification';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Report from './pages/Report/Report';
+import Home from './components/Home';
 // import { NativeRouter, Route } from 'react-router-native';
 
 
@@ -30,23 +32,22 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <NavigationContainer>
-      <Stack.Navigator >
-        <Stack.Screen name="Initial" component={Initial} options={{ headerShown: false }}  />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }}/>
+        <Stack.Navigator >
+          <Stack.Screen name="Initial" component={Initial} options={{ headerShown: false }}  />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }}/>
 
-        <Stack.Screen name="Profile" component={Profile} options={{ title: 'Profile', }}/>
+          <Stack.Screen name="Profile" component={Profile} options={{ title: 'Profile', }}/>
 
-        <Stack.Screen name="NewWallet" component={NewWallet} options={{ title: 'NewWallet', }}/>
-        <Stack.Screen name="MyWallet" component={MyWallet} options={{title: 'MyWallet',}}/>
-        <Stack.Screen name="Verification" component={Verification} options={{ title: 'Verification', }}/>
-        <Stack.Screen name="Notification" component={Notification} options={{ title: 'Notification', }}/>
-        <Stack.Screen name="SettingsNotification" component={SettingsNotification} options={{title:'SettingNotification'}}/>
-        <Stack.Screen name="Report" component={Report} options={{title:'Report'}}/>
-
-      </Stack.Navigator>
-
+          <Stack.Screen name="NewWallet" component={NewWallet} options={{ title: 'NewWallet', }}/>
+          <Stack.Screen name="MyWallet" component={MyWallet} options={{title: 'MyWallet',}}/>
+          <Stack.Screen name="Verification" component={Verification} options={{ title: 'Verification', }}/>
+          <Stack.Screen name="Notification" component={Notification} options={{ title: 'Notification', }}/>
+          <Stack.Screen name="SettingsNotification" component={SettingsNotification} options={{title:'SettingNotification'}}/>
+          <Stack.Screen name="Report" component={Report} options={{title:'Report'}}/>
+          <Stack.Screen name="Home" component={Home} options={{ title: 'Home', }}/>
+        </Stack.Navigator>
     </NavigationContainer>
   );
 }
